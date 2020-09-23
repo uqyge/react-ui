@@ -7,11 +7,11 @@ import PropertyWindow from "./component/propertyWindow";
 import { Divider } from "@material-ui/core";
 import Music from "./actions/music";
 import Web from "./actions/web";
-
+// import DropList from "./component/DropList";
 const actionType = "music";
 
 function App() {
-  const keyMap = { 1: <Music btn={handleClick} />, 2: <Web /> };
+  const keyMap = { Music: <Music btn={handleClick} />, 2: <Web /> };
   function handleClick(evt) {
     console.log("clicked", evt);
     console.log("selected", selected);
@@ -30,15 +30,7 @@ function App() {
       </div>
       <Divider />
       <div className="property">
-        <PropertyWindow selected={selected}>
-          {keyMap[selected.id]}
-
-          {/* <button
-            onClick={() => {
-              console.log(selected);
-            }}
-          /> */}
-        </PropertyWindow>
+        <PropertyWindow selected={selected}>{keyMap[selected]}</PropertyWindow>
       </div>
     </div>
   );
