@@ -13,6 +13,7 @@ const Board = (props) => {
           <DropTarget
             onItemDropped={(item) => {
               setName({ ...name, [id]: item });
+              props.setKey({ [id]: item })
               // console.log(name);
             }}
           >
@@ -20,7 +21,7 @@ const Board = (props) => {
             <button
               draggable={true}
               onClick={() => {
-                props.handleKeySelect(name[id]);
+                props.handleKeySelect({ [id]: name[id] });
               }}
             >
               {name[id]}

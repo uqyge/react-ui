@@ -5,7 +5,7 @@ const Music = (props) => {
   return (
     <button
       onClick={() => {
-        props.btn("music");
+        console.log('music')
       }}
     >
       Music

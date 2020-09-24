@@ -55,7 +55,7 @@ const ActionsList = () => {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {["Music", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Music", "Web", "Send email", "Drafts"].map((text, index) => (
             <Drag dataItem={text}>
               <ListItem button key={text}>
                 <ListItemIcon>

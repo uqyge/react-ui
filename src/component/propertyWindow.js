@@ -5,8 +5,7 @@ const PropertyWindow = (props) => {
   console.log("props", props);
   return (
     <div>
-      <div>{props.children}</div>
-      {/* <DropList></DropList> */}
+      <div onClick={() => console.log('props', props)}>{props.children}</div>
     </div>
   );
 };
